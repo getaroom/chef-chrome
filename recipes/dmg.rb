@@ -3,4 +3,4 @@ dmg_package 'Google Chrome' do
   source node['chrome']['dmg_source']
   checksum node['chrome']['dmg_checksum']
   action :nothing
-end.run_action(node['chrome']['action'])
+end.run_action(node['chrome']['action'].to_sym)

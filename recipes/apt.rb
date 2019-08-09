@@ -9,4 +9,4 @@ end.run_action(:add)
 
 package "google-chrome-#{node['chrome']['track']}" do
   action :nothing
-end.run_action(node['chrome']['action'])
+end.run_action(node['chrome']['action'].to_sym)
